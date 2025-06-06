@@ -1,4 +1,8 @@
-# [SkillVault]
+# SkillVault
+
+- Users can register, login and create entries. Logs to keep track of their progress while learning any skill.
+- This project make use of Node.js/Express. SQLite3 as database managed using Sequelize ORM. 
+- Using bcrypt, JWT to keep user's data secure.
 
 ## Database Schema Design
 
@@ -6,7 +10,7 @@
 
 ## API Documentation
 
-- Base URL ![base-url] http://localhost:5000/api
+- Base URL http://localhost:5000/api
 
 | Method | Endpoint          | Description         | Auth Required |
 |--------|-------------------|---------------------|---------------|
@@ -16,13 +20,6 @@
 |**POST**|*/entries*         | Create a new entry  |✅ Yes        |
 |**PUT** |*/entries/:id*     | Update an entry by id|✅ Yes       |
 |**Delete**|*/entries/:id*   | Delete an entry by Id|✅ Yes       |
-
-
-
-
-
-
-
 
 
 [db-schema]: ./images/Database%20Schema%20Design.png
