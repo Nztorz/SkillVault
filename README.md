@@ -10,7 +10,7 @@
 
 ## API Documentation
 
-- Base URL http://localhost:5000/api
+- Base URL http://localhost:8000/api
 
 | Method | Endpoint          | Description         | Auth Required |
 |--------|-------------------|---------------------|---------------|
@@ -23,4 +23,4 @@
 
 
 [db-schema]: ./images/Database%20Schema%20Design.png
-[base-url]: http://localhost:5000/api
+[base-url]: http://localhost:8000/api
