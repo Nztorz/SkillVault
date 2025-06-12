@@ -1,4 +1,5 @@
 'use strict';
+const validator = require("validator");
 const {
   Model
 } = require('sequelize');
@@ -33,11 +34,6 @@ module.exports = (sequelize, DataTypes) => {
       unique: true,
       validate: {
         len: [3, 256],
-        isNotEmail(value) {
-          if(validator.isEmail(value)) {
-            throw new Error("Cannot be an email.")
-          }
-        },
       }
     },
     hashedPassword: {

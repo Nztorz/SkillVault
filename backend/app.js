@@ -44,7 +44,7 @@ app.use(
 )
 
 // routes
-const routes = require('./routes');
+const routes = require('./routes/index');
 const { ValidationError } = require('sequelize');
 app.use(routes);
 

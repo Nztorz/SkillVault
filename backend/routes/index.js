@@ -1,6 +1,13 @@
 // setup the route
-const express = require('express');
-const router = express.Router();
+const router = require('express').Router();
+const sessionRouter = require("./api/session");
+const usersRouter = require("./api/users");
+const { restoreUser } = require("../utils/auth")
+
+
+router.use(restoreUser);
+router.use("/api/session", sessionRouter);
+router.use("/api/users", usersRouter);
 
 router.get('/api/csrf/restore', (req, res) => {
     const csrfToken = req.csrfToken();
@@ -10,9 +17,8 @@ router.get('/api/csrf/restore', (req, res) => {
     })
 })
 
-// import the router api 
-const apiRouter = require('./api');
-// mount the router
-router.use('/api', apiRouter);
+router.post("/test", (req, res) => {
+    res.json({ requestBody: req.body });
+})
 
 module.exports = router;
